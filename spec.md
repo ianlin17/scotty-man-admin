@@ -99,9 +99,8 @@ Medusa 使用者本身沒有細分角色，本系統以使用者 `metadata.role`
 ### 5.3 商品管理（`/products`）
 - 列表、搜尋、依分類 / 系列 / 狀態篩選。
 - 新增 / 編輯：基本資料、圖片上傳、選項與變體、價格（依 Region）、庫存、分類、系列、品牌、SEO 欄位。
-- 推桿規格區塊（對應後端 `product.metadata` 固定 key，見 `../backend/spec.md` §6.1）：Loft、Lie、頸部設計（下拉）、桿頭形狀（下拉）、材質、趾部下垂、桿頭重量；表單以與後端共用的 zod schema 驗證。
-- 變體產生器：勾選長度（33" / 34" / 35"）與左右手（RH / LH）後自動產生 Length × Dexterity 的 variants 與 SKU。
-- 前台篩選預覽：儲存後顯示此商品會出現在哪些 facets（呼叫 `/store/catalog/facets`），確認規格填寫完整。
+- 商品說明使用富文字編輯器（材質、工藝、Loft / Lie / Neck 等細節都寫在這裡，不另設欄位）。
+- 分類為單選（推桿 / 推桿套 / 服飾 / 配件），選項與變體由營運自訂（例：尺寸、顏色），勾選選項值後自動產生 variants 與 SKU。
 - 上下架、複製商品、批次調整價格。
 - 分類（`/categories`）、系列（`/collections`）、品牌（`/brands`）維護。
 
